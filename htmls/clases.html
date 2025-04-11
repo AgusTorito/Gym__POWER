@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style-clases.css">
+</head>
+<body>
+
+  <header>
+    <nav class="mega-menu">
+      <div class="logo">
+        <a href="../index.html">GYM POWER</a>
+        <img src="../imgs/logo2.png" alt="logo" class="logotipo">
+      </div>
+      <button class="toggle-menu" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="Entrenadores.html">Entrenadores</a></li>
+        <li><a href="Precios.html">Precios</a></li>
+        <li><a href="formulario.html">Contáctanos</a></li>
+        <li><a href="blog.html">Blog de Fitness</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <section class="clas">
+        <h2>Nuestras Clases</h2>
+      
+        <!-- Filtros -->
+        <div class="filtros">
+          <input type="radio" name="filtro" id="todos" checked>
+          <label for="todos">Todos</label>
+          <input type="radio" name="filtro" id="musculacion">
+          <label for="musculacion">Musculación</label>
+          <input type="radio" name="filtro" id="crossfit">
+          <label for="crossfit">CrossFit</label>
+          <input type="radio" name="filtro" id="yoga">
+          <label for="yoga">Yoga</label>
+          <input type="radio" name="filtro" id="spinning">
+          <label for="spinning">Spinning</label>
+        </div>
+      
+        <!-- Galería Grid -->
+        <div class="galeria">
+          <div class="clase musculacion">
+            <img src="../imgs/musculacion.jpeg" alt="">
+            <div class="info">Musculación intensa</div>
+          </div>
+          <div class="clase crossfit">
+            <img src="../imgs/crossfit.jpeg" alt="">
+            <div class="info">CrossFit extremo</div>
+          </div>
+          <div class="clase yoga">
+            <img src="../imgs/yoga.jpg" alt="">
+            <div class="info">Relajación con Yoga</div>
+          </div>
+          <div class="clase spinning">
+            <img src="../imgs/spinning.jpeg" alt="">
+            <div class="info">Spinning a tope</div>
+          </div>
+          <div class="clase musculacion">
+            <img src="../imgs/fuerza.jpg" alt="">
+            <div class="info">Pesas y fuerza</div>
+          </div>
+        </div>
+      
+        <!-- Horarios -->
+        <h3>Horarios Semanales</h3>
+        <div class="tabla-horarios">
+          <table>
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8:00</td>
+                <td>Yoga</td>
+                <td>Musculación</td>
+                <td>Spinning</td>
+                <td>CrossFit</td>
+                <td>Yoga</td>
+              </tr>
+              <tr>
+                <td>18:00</td>
+                <td>CrossFit</td>
+                <td>Yoga</td>
+                <td>Musculación</td>
+                <td>Spinning</td>
+                <td>CrossFit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>   
+      <br>
+      <br>
+
+      <footer>
+        <form class="newsletter">
+          <label for="email">Suscribite al newsletter:</label>
+          <input type="email" id="email" placeholder="Tu correo" required />
+          <br>
+          <br>
+          <button type="submit" class="btn">Suscribirse</button>
+        </form>
+        <br>
+        <div class="social">
+          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://twitter.com">Twitter</a>
+        </div>
+        <br>
+        <div class="mapa">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3%2C-24.2%2C-65.2%2C-24.1&amp;layer=mapnik" style="width: 100%; height: 200px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </footer>
+  
+      <script src="../JS/clases.js"></script>
+</body>
+</html>

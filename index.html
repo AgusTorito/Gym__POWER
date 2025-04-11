@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gimnasio Power</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Encabezado con Mega Menú -->
+  <header>
+    <nav class="mega-menu">
+      <div class="logo">
+        <a href="index.html">GYM POWER</a>
+        <img src="imgs/logo2.png" alt="logo" class="logotipo">
+      </div>
+      <button class="toggle-menu" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="htmls/clases.html">Clases</a></li>
+        <li><a href="htmls/Entrenadores.html">Entrenadores</a></li>
+        <li><a href="htmls/Precios.html">Precios</a></li>
+        <li><a href="htmls/formulario.html">Contáctanos</a></li>
+        <li><a href="htmls/blog.html">Blog de Fitness</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero con Video -->
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="videos/Motivación Personal.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="hero-overlay">
+    </div>
+  </section>
+
+  <!-- Clases destacadas -->
+  <section class="clases">
+    <h2>Clases Destacadas</h2>
+    <div class="card-container">
+      <div class="card">Musculación</div>
+      <div class="card">CrossFit</div>
+      <div class="card">Yoga</div>
+    </div>
+  </section>
+
+  <!-- Contador Animado -->
+  <section class="contador">
+    <h2><span class="numero">1000+</span> socios satisfechos</h2>
+  </section>
+
+  <!-- Testimonios en carrusel CSS -->
+  <section class="testimonios">
+    <h2>Testimonios</h2>
+    <div class="carrusel">
+      <div class="slides">
+        <div class="slide">"Me cambió la vida" - Juan</div>
+        <div class="slide">"Increíbles entrenadores" - Ana</div>
+        <div class="slide">"Resultados garantizados" - Leo</div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <form class="newsletter">
+      <label for="email">Suscribite al newsletter:</label>
+      <input type="email" id="email" placeholder="Tu correo" required />
+      <br>
+      <br>
+      <button type="submit" class="btn">Suscribirse</button>
+    </form>
+    <br>
+    <div class="social">
+      <a href="https://www.instagram.com/">Instagram</a>
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://twitter.com">Twitter</a>
+    </div>
+    <br>
+    <div class="mapa">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3%2C-24.2%2C-65.2%2C-24.1&amp;layer=mapnik" style="width: 100%; height: 200px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+
+  <script src="../JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style-precios.css">
+</head>
+<body>
+
+  <header>
+    <nav class="mega-menu">
+      <div class="logo">
+        <a href="../index.html">GYM POWER</a>
+        <img src="../imgs/logo2.png" alt="logo" class="logotipo">
+      </div>
+      <button class="toggle-menu" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="Entrenadores.html">Entrenadores</a></li>
+        <li><a href="Precios.html">Precios</a></li>
+        <li><a href="formulario.html">Contáctanos</a></li>
+        <li><a href="blog.html">Blog de Fitness</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+    <section class="precios">
+        <h2>Compará nuestros planes</h2>
+      
+        <!-- Toggle para cambiar entre mensual y anual -->
+        <div class="toggle-precios">
+          <input type="radio" name="plan" id="mensual" checked>
+          <label for="mensual">Mensual</label>
+          <input type="radio" name="plan" id="anual">
+          <label for="anual">Anual</label>
+        </div>
+      
+        <!-- Tabla de precios -->
+        <div class="tabla-precios">
+          <div class="plan">
+            <h3>Básico</h3>
+            <p class="precio mensual">$5.000</p>
+            <p class="precio anual">$50.000</p>
+            <ul>
+              <li><span data-tooltip="Acceso a sala de pesas">✔ Acceso básico</span></li>
+              <li><span data-tooltip="1 clase semanal incluida">✔ 1 clase</span></li>
+            </ul>
+            <button>Elegir</button>
+          </div>
+      
+          <div class="plan">
+            <h3>Full</h3>
+            <p class="precio mensual">$9.000</p>
+            <p class="precio anual">$90.000</p>
+            <ul>
+              <li><span data-tooltip="Acceso a todo el gimnasio sin restricciones">✔ Acceso ilimitado</span></li>
+              <li><span data-tooltip="Clases ilimitadas por mes">✔ Clases ilimitadas</span></li>
+              <li><span data-tooltip="1 consulta con nutricionista al mes">✔ Nutricionista</span></li>
+            </ul>
+            <button>Elegir</button>
+          </div>
+      
+          <div class="plan">
+            <h3>Premium</h3>
+            <p class="precio mensual">$12.000</p>
+            <p class="precio anual">$120.000</p>
+            <ul>
+              <li><span data-tooltip="Plan Full + asesoramiento personalizado">✔ Asesoramiento Pro</span></li>
+              <li><span data-tooltip="Seguimiento semanal de objetivos">✔ Seguimiento</span></li>
+              <li><span data-tooltip="Entrenamiento individual 1 vez al mes">✔ Entrenador Personal</span></li>
+            </ul>
+            <button>Elegir</button>
+          </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btnsub">Comprar</button>
+      </section>
+
+      <!-- Modal personalizado -->
+    <div id="modalCompra" class="modal-compra hidden">
+        <div class="modal-contenido">
+            <p>¡Gracias por su compra, que lo disfrute! 🎉</p>
+        </div>
+    </div>
+
+    <footer>
+      <form class="newsletter">
+        <label for="email">Suscribite al newsletter:</label>
+        <input type="email" id="email" placeholder="Tu correo" required />
+        <br>
+        <br>
+        <button type="submit" class="btn">Suscribirse</button>
+      </form>
+      <br>
+      <div class="social">
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.facebook.com/">Facebook</a>
+        <a href="https://twitter.com">Twitter</a>
+      </div>
+      <br>
+      <div class="mapa">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3%2C-24.2%2C-65.2%2C-24.1&amp;layer=mapnik" style="width: 100%; height: 200px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </footer>
+
+      <script src="../JS/precios.js"></script>
+</body>
+</html>

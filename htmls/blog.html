@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Fitness</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style-blog.css">
+</head>
+<body>
+    
+  <header>
+    <nav class="mega-menu">
+      <div class="logo">
+        <a href="../index.html">GYM POWER</a>
+        <img src="../imgs/logo2.png" alt="logo" class="logotipo">
+      </div>
+      <button class="toggle-menu" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="Entrenadores.html">Entrenadores</a></li>
+        <li><a href="Precios.html">Precios</a></li>
+        <li><a href="formulario.html">Contáctanos</a></li>
+        <li><a href="blog.html">Blog de Fitness</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contenedor-blog">
+      <!-- Filtro por etiquetas -->
+      <div class="filtros">
+        <input type="radio" name="tag" id="todo" checked>
+        <label for="todo">Todo</label>
+        <input type="radio" name="tag" id="nutricion">
+        <label for="nutricion">Nutrición</label>
+        <input type="radio" name="tag" id="entrenamiento">
+        <label for="entrenamiento">Entrenamiento</label>
+        <input type="radio" name="tag" id="bienestar">
+        <label for="bienestar">Bienestar</label>
+      </div>
+    
+      <!-- Artículos estilo revista -->
+      <main class="blog">
+        <article class="post nutricion" tabindex="0">
+          <img src="../imgs/comida-saludable.jpeg" alt="Comida saludable">
+          <div class="contenido">
+            <h2>La dieta que potencia tu entrenamiento</h2>
+            <p>Descubrí qué alimentos potencian el rendimiento físico y aceleran la recuperación muscular.</p>
+          </div>
+        </article>
+        <article class="post entrenamiento" tabindex="0">
+          <img src="../imgs/rutina-entrenamiento.jpg" alt="Rutina de entrenamiento">
+          <div class="contenido">
+            <h2>Entrenamiento HIIT: más resultados en menos tiempo</h2>
+            <p>El High Intensity Interval Training revoluciona los gimnasios. Te contamos por qué funciona.</p>
+          </div>
+        </article>
+        <article class="post bienestar" tabindex="0">
+          <img src="../imgs/descanso.jpg" alt="Meditación y descanso">
+          <div class="contenido">
+            <h2>Mindfulness: el descanso que tu cuerpo necesita</h2>
+            <p>Relajá tu mente y mejorá tu bienestar general con estas técnicas de meditación.</p>
+          </div>
+        </article>
+      </main>
+    
+      <!-- Sección de comentarios -->
+      <section class="comentarios" aria-label="Comentarios">
+        <h3>Comentarios</h3>
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>Lázaro</strong>
+            <p>Excelente artículo sobre nutrición, voy a aplicar esos consejos esta semana.</p>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>María</strong>
+            <p>Me encantó el de mindfulness, es justo lo que necesitaba. Gracias!</p>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>Pedro</strong>
+            <p>¡Qué buena rutina HIIT! La empecé hoy y me siento lleno de energía.</p>
+          </div>
+        </div>
+      
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>Lucía</strong>
+            <p>Muy buenos artículos, el diseño del blog es genial también.</p>
+          </div>
+        </div>
+      
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>Diego</strong>
+            <p>Gracias por la info de descanso. Subestimaba lo importante que era.</p>
+          </div>
+        </div>
+      
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>Sofía</strong>
+            <p>¡Quiero más recetas saludables! Muy útiles los consejos.</p>
+          </div>
+        </div>
+      
+        <div class="comentario">
+          <div class="avatar"></div>
+          <div class="texto">
+            <strong>Nicolás</strong>
+            <p>Increíble lo del mindfulness, me ayuda a dormir mejor.</p>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+    
+    <footer>
+      <form class="newsletter">
+        <label for="email">Suscribite al newsletter:</label>
+        <input type="email" id="email" placeholder="Tu correo" required />
+        <br>
+        <br>
+        <button type="submit" class="btn">Suscribirse</button>
+      </form>
+      <br>
+      <div class="social">
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.facebook.com/">Facebook</a>
+        <a href="https://twitter.com">Twitter</a>
+      </div>
+      <br>
+      <div class="mapa">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3%2C-24.2%2C-65.2%2C-24.1&amp;layer=mapnik" style="width: 100%; height: 200px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </footer>
+    
+    <script src="../JS/blog.js"></script>
+</body>
+</html>

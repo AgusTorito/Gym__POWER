@@ -1,0 +1,180 @@
+:root {
+    --color-bg: #fdfdfd;
+    --color-text: #222;
+    --color-acento: #00c2ff;
+    --color-tag: #ddd;
+    --color-hover: #00aaff22;
+    --duracion: 0.3s;
+  }
+  
+  body.dark {
+    --color-bg: #121212;
+    --color-text: #f1f1f1;
+    --color-acento: #00ff88;
+    --color-tag: #333;
+  }
+  
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+  }
+  
+  
+  .filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .filtros input {
+    display: none;
+  }
+  
+  .filtros label {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: var(--color-tag);
+    cursor: pointer;
+    transition: background var(--duracion);
+  }
+  
+  .filtros input:checked + label {
+    background: var(--color-acento);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--color-acento);
+    font-size: 20px;
+    transition: 0.2s;
+  }
+
+  .filtros input:hover + label {
+    background: #55f5b5;
+  }
+
+    /* Filtro por etiquetas */
+    #nutricion:checked ~ .blog .post:not(.nutricion),
+    #entrenamiento:checked ~ .blog .post:not(.entrenamiento),
+    #bienestar:checked ~ .blog .post:not(.bienestar) {
+    display: none;
+  }
+    
+  #todo:checked ~ .blog .post {
+    display: block;
+  }
+  
+  .blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-align: start;
+  }
+  
+  .post {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.2s ease;
+    /*clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%);*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  body.dark .post {
+    background: #1e1e1e;
+  }
+  
+  .post.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .post img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  .contenido {
+    padding: 15px;
+  }
+  
+  .contenido h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    transition: color var(--duracion);
+  }
+  
+  .contenido p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .post:hover h2 {
+    color: var(--color-acento);
+  }
+
+  .post:focus {
+    box-shadow: 0 0 15px var(--color-acento);
+  }
+
+  
+  /* Comentarios */
+  .comentarios {
+    padding: 30px;
+    background: #f0f0f0;
+    scroll-snap-align: start;
+  }
+  
+  body.dark .comentarios {
+    background: #1a1a1a;
+  }
+  
+  .comentario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+  }
+  
+  .avatar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background: limegreen;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  
+  .texto p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Accesibilidad */
+  :focus {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
+  }
+  
+  .post {
+    transition: all 0.4s ease;
+  }

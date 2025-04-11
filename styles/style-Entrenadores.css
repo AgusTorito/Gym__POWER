@@ -1,0 +1,189 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+.entrenadores {
+    padding: 50px;
+    background: #f9f9f9;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    flex: 1;
+  }
+  
+  .grid-entrenadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .carta {
+    perspective: 1000px;
+  }
+
+  .carta:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #00c2ff;
+    font-size: 25px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .carta:hover .card-inner {
+    transform: rotateY(180deg);
+    transition: 3s;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-front {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-front img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .card-back {
+    background: #333;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .habilidades span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .barra {
+    height: 10px;
+    background: #555;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 5px 0 15px;
+    position: relative;
+  }
+  
+  .barra::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #00ff88, #00c2ff);
+    animation: rellenar 2s ease forwards;
+  }
+  
+  .fuerza::after { width: 90%; }
+  .flexibilidad::after { width: 80%; }
+  .resistencia::after { width: 70%; }
+  
+  @keyframes rellenar {
+    from { width: 0; }
+    to { width: inherit; }
+  }
+  
+  .rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: gold;
+    transform: scale(1.2);
+  }
+  
+  /* Scroll Reveal */
+.carta {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.carta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modo oscuro */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .entrenadores {
+  background-color: #1a1a1a;
+}
+
+body.dark .card-front {
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+body.dark .card-back {
+  background-color: #111;
+}
+
+body.dark .rating label {
+  color: #777;
+}
+
+
+.favorito {
+  color: var(--color-acento, #00c2ff);
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
+}
+
+
+.carta.seleccionada {
+  outline: 3px solid #00c2ff;
+  box-shadow: 0 0 20px #00c2ff;
+}
+
+.carta.rotar .card-inner {
+  transform: rotateY(180deg);
+}
