@@ -3,8 +3,9 @@
     --color-secundario: #003b5b;
     --color-bg: #fffdfd;
     --color-texto: #333;
-    --color-error: #ff4d4d;
+    --color-error: #f40000;
     --duracion: 0.3s;
+    --color-valido: #00ff40;
   }
   
   body.dark {
@@ -85,7 +86,7 @@
   }
   
   input:valid, textarea:valid {
-    border-color: var(--color-principal);
+    border-color: var(--color-valido);
   }
   
   /* Botón con micro-interacciones */
@@ -174,4 +175,15 @@
     }
   }
   
+  .shake {
+    animation: shake 0.3s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
   
